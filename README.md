@@ -1,11 +1,18 @@
-# [“ Leeing ” —— NewBeing 的简略模仿]((https://github.com/lightxxxshadow/Leeing--NewsGPT))
-![image](https://github.com/lightxxxshadow/Leeing--NewsGPT/assets/93126839/7c9702ed-3bea-4d09-bdfe-623b94e7cb21)
+# 👩‍🏫👩‍🏫[“ Leeing ”](https://github.com/lightxxxshadow/Leeing--NewsGPT) —— NewBeing 的简略模仿👩‍🏫👩‍🏫
 
-这是一个低配版本的Newbeing,它与网络链接，可以通过网络接口获取最新的每日新闻，并借助这些新闻来回答你的问题。
+<p align="center">
+    <img src="./封面.jpg" width=300px/>
+</p>
+
+**这是一个低配版本的Newbeing,它与网络链接，可以通过网络接口获取最新的每日新闻，并借助这些新闻来回答你的问题。**
 * 设计并训练了基于Bert的token级别的关键词抽取模型。
 * 利用新闻访谈数据微调ChatGLM以获得更好的效果。
 * 利用两个新闻接口分别提取最新消息与最匹配消息，并基于Dense Retrieval算法选择最相关新闻作为输入。
 * 实现了网页版的demo版本测试。
+
+<p align="center">
+    <img src="./展示.png" width=2000px/>
+</p>
 
 ## 最近更新
 - 👏🏻  2023.06.20: Leeing-v1版本发布.实现了基本全部功能，支持网页版交互与命令行交互两种模式。
@@ -38,11 +45,19 @@ pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --e
 
 - [在这里](https://drive.google.com/file/d/1T8H9lq2L2pnzqMSKiwEnR4a7O2PWlXmd/view?usp=sharing)下载用于关键词提取的模型，将其放在./Keyword_Extractor路径下即可，微调时GPU要求最低显存3g左右。
 
+<p align="center">
+    <img src="./key_extra训练.png" width=800px/>
+</p>
 
 - [在这里](https://drive.google.com/file/d/1rRfy7sc2tJ2fyjUWxgnrrU6gi-zyqwwt/view?usp=sharing)下载基于下面的数据微调后的ChatGLM模型的prefix部分参数模型，将整个output文件夹放置在./chatglm_ptuning路径下，
 将其放在./Keyword_Extractor路径下即可，进行微调时显存需要17g左右。
 
+ 
+<p align="center">
+    <img src="./chatglm训练.png" width=800px/>
+</p>
 
+ 
 - 注意同时需要下载清华大学发布的[ChatGLM模型](https://github.com/THUDM/ChatGLM-6B)，我这里选择的是最小的4int级别量化版本，也可以不微调直接使用，显存消耗6-7g，将下载后的整个chatglm-6b-int4文件姐放在与本README同级目录下，
 注意修改代码中本地的模型路径！！！
 
@@ -73,30 +88,8 @@ streamlit run demo_show.py
 pip install streamlit
 pip install streamlit_chat
 ```
-
-## 示例
-* 样例1：失恋
-*
 <p align="center">
-    <img src="./figure/example_shilian.png" width=600px/>
-</p>
-
-* 样例2：宿舍关系
-
-<p align="center">
-    <img src="./figure/example_sushe.png" width=600px/>
-</p>
-
-* 样例3：期末考试
-
-<p align="center">
-    <img src="./figure/example_kaoshi.png" width=600px/>
-</p>
-
-* 样例4：科研压力
-
-<p align="center">
-    <img src="./figure/example_keyan.png" width=600px/>
+    <img src="./demo.png" width=1000px/>
 </p>
 
 ## 参考仓库
