@@ -1,7 +1,7 @@
 # 👩‍🏫👩‍🏫[“ Leeing ”](https://github.com/lightxxxshadow/Leeing--NewsGPT) —— NewBeing 的简略模仿👩‍🏫👩‍🏫
 
 <p align="center">
-    <img src="./封面.jpg" width=300px/>
+    <img src="./封面.jpg" width=600px/>
 </p>
 
 **这是一个低配版本的Newbeing,它与网络链接，可以通过网络接口获取最新的每日新闻，并借助这些新闻来回答你的问题。**
