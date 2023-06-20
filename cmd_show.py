@@ -95,8 +95,7 @@ def main():
         news_fin ,url= get_final_news(new_time_flag,key_news_rele,key_news_time,user_text,DR_tokenizer, DR_model)
         prompt = f"Please read the following news and remember it:[{news_fin}] based on the news ,talk about the question:[{user_text}]，first retell the news and then give your answer to the question activly and vivdly."
         response, his = chat.chat(chat_tokenizer, prompt, [history[(turns+1)%2]],chatmodel)
-        history[turns % 2][0] = user_text
-        history[turns % 2][1] = his[1][1]
+        history[turns % 2] = tuple([user_text,his[1][1]])
 
         print("<^-^> NewsChat_Bot>>%s"%response)
         print('<^-^> Using news from : ',url)
